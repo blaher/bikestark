@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<h1 class="f2 lh-title b mb3">{{ .Params.first }} {{ .Params.last }}</h1>
+
+<p><strong>Phone:</strong> {{ .Params.phone }}</p>
+<p><strong>Email:</strong> {{ .Params.email }}</p>
+<p><strong>Address:</strong> {{ .Params.address }}</p>
+
+{{ .Content }}
+
+{{ end }}
