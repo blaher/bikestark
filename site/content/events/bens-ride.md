@@ -1,9 +1,10 @@
 ---
 title: Some Awesome Ride
-start: 2024-12-20T15:04:10.000Z
+leader: Ben Young
+date: 2024-12-20T13:18:50
 location: Fort Laurens
 class: Advanced
-map: 0
+map: 222 - Another Map
 description: Ben's awesome bike ride from Canton to Stuttgart. Might get a little wet!
 status: Scheduled
 ---

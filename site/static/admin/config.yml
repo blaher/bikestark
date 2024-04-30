@@ -36,7 +36,16 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Start Date", name: "start", widget: "datetime"}
+      - label: "Ride Leader"
+        name: "leader"
+        widget: "select"
+        options: [
+          "Ben Young",
+          "Chuck",
+          "Bruce Trieber",
+          "Sally"
+        ]
+      - {label: "Start Date", name: "date", widget: "datetime"}
       - label: "Location"
         name: "location"
         widget: "select"
@@ -60,11 +69,11 @@ collections: # A list of collections the CMS should be able to edit
         name: "map"
         widget: "select"
         options: [
-          "111",
-          "222",
-          "355"
+          "111 - Some Map",
+          "222 - Another Map",
+          "355 - Bigger Map"
         ]
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Notes", name: "description", widget: "text"}
       - label: "Status"
         name: "status"
         widget: "select"
