@@ -1,7 +1,7 @@
 <tr>
     <td><a class="fa-calendar" href="#">+</a></td>
     <td>{{ .Date.Format "Mon Jan 2, 2006 - 7:00 AM" }}</td>
-    <td style='color:{{ if eq .Params.status "scheduled" }}green{{ else if eq .Params.status "cancled" }}red{{ else }}yellow{{ end }};'>{{ .Params.status }}</td>
+    <td style='color: {{ if eq .Params.status "scheduled" }}green{{ else if eq .Params.status "cancled" }}red{{ else }}yellow{{ end }};'>{{ .Params.status }}</td>
     <td>{{ .Params.location }}</td>
     <td>{{ .Params.leader }}</td>
     <td>{{ .Params.class }}</td>
