@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+    <h1 class="f3 b lh-title mb1 primary">{{ .Title }}</h1>
+    <p class="mid-gray lh-title mb2">{{ .Date.Format "Mon, Jan 2, 2006 - 10:16 AM" }}</p>
+    <p><strong>Current Status:</strong> {{ .Params.status }}</p>
+    <p><strong>Starting Location:</strong> {{ .Params.location }}</p>
+    <p><strong>Ride Leader:</strong> {{ .Params.leader }}</p>
+    <p><strong>Ride Class:</strong> {{ .Params.class }}</p>
+    <p><strong>Route Map:</strong> <a href="#">{{ .Params.map }}</a></p>
+    <p class="mb0">{{ .Description }}</p>
+
+    {{ .Content }}
+
+{{ end }}

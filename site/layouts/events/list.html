@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<div class="mw7 center">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Location</th>
+        <th>Leader</th>
+        <th>Class</th>
+        <th>Route</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ $events := where .Site.RegularPages  "Section" "events" }}
+      {{ $events := $events | intersect (where $events "Date" "ge" now) | first 300 }}
+
+      {{ range $events }}
+        {{ .Render "row"}}
+      {{ end }}
+    </tbody>
+  </table>
+
+  {{ partial "pagination" . }}
+</div>
+
+{{end}}
