@@ -20,9 +20,19 @@
                 <tbody>
                   {{ $events := where .Site.RegularPages  "Section" "events" }}
                   {{ $events := $events | intersect (where $events "Date" "ge" now) | first 30 }}
+                  {{ $events := $events.Reverse }}
             
                   {{ range $events }}
-                    ...
+                    <tr>
+                        <td><a class="fa-calendar" href="#">+</a></td>
+                        <td>{{ .Date.Format "Mon Jan 2, 2006 - 7:00 AM" }}</td>
+                        <td style='color: {{ if eq .Params.status "Scheduled" }}green{{ else if eq .Params.status "Canceled" }}red{{ else }}yellow{{ end }};'>{{ .Params.status }}</td>
+                        <td>{{ .Params.location }}</td>
+                        <td>{{ .Params.leader }}</td>
+                        <td>{{ .Params.class }}</td>
+                        <td><a href="#">{{ .Params.map }}</a></td>
+                        <td><a href="{{ .RelPermalink }}">More</a></td>
+                    </tr>
                   {{ end }}
                 </tbody>
               </table>
