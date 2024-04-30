@@ -50,7 +50,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: "select"
         options: [
           "Open",
-          "New Rider Friendly"
+          "New Rider Friendly",
           "Social Ride",
           "Intermediate",
           "Advanced",
