@@ -7,16 +7,16 @@ describe("empty spec", () => {
     cy.get("h1").contains("Great coffee with a conscience");
   });
 
-  it("navigates to the product page", () => {
-    cy.get('a[href="/products"]').eq(0).click();
-    cy.url().should("include", "/products");
-    cy.get("h1").contains(/Our Coffee/i);
+  it("navigates to the events page", () => {
+    cy.get('a[href="/events"]').eq(0).click();
+    cy.url().should("include", "/events");
+    cy.get("h1").contains(/Ride Schedule/i);
   });
 
-  it("navigates to the values page", () => {
-    cy.get('a[href="/values"]').eq(0).click();
-    cy.url().should("include", "/values");
-    cy.get("h1").contains(/Values/i);
+  it("navigates to the members page", () => {
+    cy.get('a[href="/members"]').eq(0).click();
+    cy.url().should("include", "/members");
+    cy.get("h1").contains(/Latest stories/i);
   });
 
   it("navigates to the blog page", () => {
